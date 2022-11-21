@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #6725a8;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+body > header {
+  padding: 16px 24px;
+  display: flex;
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 32px;
+}
+main h1 {
+  margin-bottom: 27px;
+  font-weight: 700;
+  font-size: 28px;
+}
+.search-input {
+  flex: 1;
+  height: 48px;
+  border-radius: 36px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  padding: 0 20px;
+  color: #fff;
+  margin-right: 32px;
+}
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.logo {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 86%;
+  letter-spacing: 0.02em;
+  font-variant: small-caps;
+  margin-right: 32px;
+  letter-spacing: 0.02em;
+}
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+}
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nav__item img {
+  width: 56px;
+  height: 30px;
+}
+.nav__item span {
+  font-size: 13px;
+}
+.menu-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-right: 16px;
+}
+.menu-btn div {
+  width: 28px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+main {
+  border-radius: 24px 24px 0px 0px;
+  background-color: #f6f6fa;
+  color: #000;
+  padding: 34px 24px 0 24px;
+}
+
+.cart__list {
+  margin-top: 16px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  list-style-type: none;
+}
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+.info {
+  display: flex;
+  width: 397px;
+}
+.info__title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.info__spec {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.info__company {
+  font-size: 13px;
+  color: #a0a0a4;
+  font-weight: 400;
+}
+.info__company:first-child {
+  margin-bottom: 4px;
+}
+.info__img {
+  width: 72px;
+  height: 96px;
+  margin-right: 16px;
+}
+.info__check {
+  margin-right: 12px;
+  transform: scale(1.5);
+  accent-color: #cb11ab;
+}
+.price {
+  display: flex;
+}
+.price__like,
+.price__del {
+  border: none;
+  background-color: transparent;
+}
+.price__like {
+  margin-right: 16px;
+}
+.price__text {
+  margin-left: 16px;
+  width: 110px;
+}
+.price__text p:first-child {
+  text-align: right;
+  font-size: 20px;
+  font-weight: 700;
+}
+.price__text p:last-child {
+  margin-left: auto;
+  width: fit-content;
+  position: relative;
+  font-size: 13px;
+  font-weight: 400;
+  color: #a0a0a4;
+  text-decoration: line-through;
+  border-bottom: 1px dashed #a0a0a4;
+}
+.price__text .value {
+  font-size: 16px;
+}
+.cart__item:nth-child(2) .price__text p:first-child {
+  font-size: 16px;
+}
+.cart__item:last-child .price__del svg path {
+  fill: #f55123;
+}
+.price__like svg,
+.price__del svg {
+  width: 20px;
+  height: 20px;
+}
+.price__available {
+  color: #f55123;
+}
+.price__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+.count {
+  display: flex;
+  width: 100px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.count__btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 44px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.count__text {
+  font-size: 16px;
+  width: 40px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-available__btn {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.not-available__text {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+.not-available__text p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.not-available .info__img {
+  filter: grayscale(100%);
+}
+.not-available .price__btns div {
+  margin-right: 126px;
+}
+.not-available .cart__item:last-child .price__del svg path {
+  fill: #000;
+}
+.not-available .cart__list {
+  margin-top: 0;
+}
+.delivery,
+.payment,
+.client {
+  margin-top: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px 24px;
+}
+.delivery {
+  margin-top: 40px;
+}
+.delivery header,
+.payment header {
+  display: flex;
+  justify-content: space-between;
+}
+.delivery__title,
+.payment__title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 16px;
+}
+.delivery__change,
+.payment__change {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #cb11ab;
+  font-weight: 700;
+  font-size: 16px;
+  width: 78px;
+  height: 24px;
+  margin-top: 7px;
+}
+.delivery__list,
+.payment__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.delivery__hint {
+  display: flex;
+  gap: 8px;
+  margin-top: 26px;
+}
+.delivery__hint p {
+  font-size: 13px;
+}
+.delivery__hint p span {
+  color: #0cb477;
+}
+.delivery__item,
+.payment__item {
+  display: flex;
+  text-align: left;
+  gap: 32px;
+}
+.delivery__item .small {
+  margin-top: 4px;
+  display: flex;
+  gap: 8px;
+}
+.delivery__item .small p {
+  font-size: 13px;
+}
+.delivery__item p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.delivery__item h3 {
+  flex-basis: 153px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.delivery__img {
+  width: 40px;
+  height: 56px;
+}
+.payment__hint {
+  font-size: 13px;
+  color: #a0a0a4;
+}
+.payment__item {
+  gap: 8px;
+}
+.payment__card {
+  display: flex;
+  gap: 12px;
+}
+.client__form {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+}
+.client__row1,
+.client__row2 {
+  display: flex;
+  gap: 24px;
+}
+.client__row1 {
+  margin-bottom: 37px;
+}
+.client__row1 input,
+.client__row2 input {
+  flex: 1;
+}
