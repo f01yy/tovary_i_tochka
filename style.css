@@ -15,7 +15,7 @@ body > header {
 }
 main {
   display: grid;
-  grid-template-columns: minmax(640px, 2fr) minmax(303px, 1fr);
+  grid-template-columns: minmax(640px, 2fr) minmax(304px, 1fr);
   column-gap: 32px;
 }
 main h1 {
