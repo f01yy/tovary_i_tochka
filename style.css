@@ -141,7 +141,7 @@ main {
 .info {
   display: flex;
   width: fit-content;
-  max-width: 397px;
+  max-width: 390px;
 }
 .info__title {
   margin-bottom: 8px;
