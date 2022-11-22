@@ -1,3 +1,5 @@
+@import url(./assets/SegoeUI/stylesheet.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -47,7 +49,8 @@ main h1 {
 .gallery__item {
   position: relative;
 }
-.gallery__circle {
+.gallery__circle,
+.cart-icon__circle {
   top: -4px;
   right: -4px;
   position: absolute;
@@ -82,6 +85,14 @@ main h1 {
   font-variant: small-caps;
   margin-right: 32px;
   letter-spacing: 0.02em;
+}
+.cart-icon {
+  position: relative;
+  display: flex;
+}
+.cart-icon__circle {
+  top: -4px;
+  right: 7px;
 }
 .nav__list {
   list-style-type: none;
@@ -127,7 +138,6 @@ main {
 }
 
 .cart__list {
-  margin-top: 16px;
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -141,7 +151,7 @@ main {
 .info {
   display: flex;
   width: fit-content;
-  max-width: 390px;
+  max-width: 380px;
 }
 .info__title {
   margin-bottom: 8px;
@@ -151,6 +161,8 @@ main {
 .info__spec {
   font-size: 13px;
   margin-bottom: 8px;
+  display: flex;
+  gap: 16px;
 }
 .info__company {
   font-size: 13px;
@@ -271,6 +283,9 @@ main {
   font-size: 16px;
   font-weight: 600;
 }
+.not-available .cart__item {
+  color: #a0a0a4;
+}
 .not-available .info__img {
   filter: grayscale(100%);
 }
@@ -338,6 +353,7 @@ main {
 }
 .delivery__hint p span {
   color: #0cb477;
+  border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 .delivery__item,
 .payment__item,
@@ -401,15 +417,23 @@ main {
 .client__row1 {
   margin-bottom: 37px;
 }
-.client__row1 input {
-  max-width: 338px;
-  width: 100%;
-  flex: 1;
-}
+.client__row1 input,
 .client__row2 input {
   width: 100%;
-  max-width: 217px;
   flex: 1;
+  font-weight: 400;
+  font-size: 16px;
+}
+.client__row1 input::placeholder,
+.client__row2 input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+}
+.client__row1 input {
+  max-width: 338px;
+}
+.client__row2 input {
+  max-width: 217px;
 }
 .client__form input {
   font-size: 16px;
@@ -500,6 +524,7 @@ body > footer p {
 }
 .total__hint p span {
   color: #0cb477;
+  border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 .total__payment .total__hint {
   display: flex;
@@ -528,4 +553,7 @@ body > footer p {
 }
 .total__agreement p {
   font-size: 13px;
+}
+.total__agreement p span {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
