@@ -664,6 +664,7 @@ body > footer p {
   .cart__item {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     display: grid;
+    grid-template-columns: 96px 1fr;
     grid-template-areas:
       'b e'
       'b c'
@@ -674,11 +675,9 @@ body > footer p {
     border: none;
   }
   .not-available .cart__item {
-    display: grid;
     grid-template-areas:
       'b c'
       'd d';
-    position: relative;
   }
   .cart__item .cart__check {
     position: absolute;
@@ -708,7 +707,7 @@ body > footer p {
   }
   .cart__price,
   .not-available .cart__price {
-    gap: 5px;
+    gap: 3px;
     margin-bottom: 3px;
     margin-left: 0;
     display: flex;
@@ -860,7 +859,7 @@ body > footer p {
     position: absolute;
     border-radius: 6px;
   }
-  .cart__price .value {
-    margin-left: 4px;
+  .value {
+    margin-left: 3px;
   }
 }
