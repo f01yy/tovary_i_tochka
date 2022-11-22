@@ -236,7 +236,6 @@ main {
 }
 .cart__price .value {
   font-size: 16px;
-  margin-left: 6px;
 }
 .cart__item:nth-child(2) .cart__price p:first-child {
   font-size: 16px;
@@ -860,5 +859,8 @@ body > footer p {
     font-size: 14px;
     position: absolute;
     border-radius: 6px;
+  }
+  .cart__price .value {
+    margin-left: 4px;
   }
 }
