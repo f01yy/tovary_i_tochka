@@ -207,13 +207,14 @@ main {
 .cart__item:nth-child(2) .price__text p:first-child {
   font-size: 16px;
 }
-.cart__item:last-child .price__del svg path {
-  fill: #f55123;
-}
 .price__like svg,
 .price__del svg {
   width: 20px;
   height: 20px;
+}
+.price__del:hover svg path,
+.price__like:hover svg path {
+  fill: #f55123 !important;
 }
 .price__available {
   color: #f55123;
@@ -396,8 +397,14 @@ main {
 .client__row1 {
   margin-bottom: 37px;
 }
-.client__row1 input,
+.client__row1 input {
+  max-width: 338px;
+  width: 100%;
+  flex: 1;
+}
 .client__row2 input {
+  width: 100%;
+  max-width: 217px;
   flex: 1;
 }
 .client__form input {
