@@ -15,6 +15,12 @@ body > header {
   padding: 16px 24px;
   display: flex;
 }
+.mobile-menu {
+  display: none;
+}
+.cart__circle-m {
+  display: none;
+}
 main {
   display: grid;
   grid-template-columns: minmax(640px, 2fr) minmax(304px, 1fr);
@@ -62,7 +68,7 @@ main h1 {
   font-size: 10px;
   font-weight: 600;
   color: #fff;
-  padding: 1px 4px;
+  padding: 2px 5px;
 }
 .search__btn {
   position: absolute;
@@ -800,5 +806,58 @@ body > footer p {
   .total__address,
   .total__date {
     display: none;
+  }
+  body > footer {
+    height: auto;
+    flex-direction: column;
+  }
+  .mobile-menu {
+    padding: 18px 5px;
+    background-color: #fff;
+    display: flex;
+    gap: 37px;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-menu__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+  }
+  .mobile-menu__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #f55123;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    padding: 2px 5px;
+    top: -4px;
+    right: -4px;
+  }
+  .cart__circle-m,
+  .not-available .cart__circle-m {
+    z-index: 1;
+    color: #000;
+    top: 90px;
+    left: 4px;
+    display: block;
+    width: fit-content;
+    min-width: 22px;
+    height: 22px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    position: absolute;
+    border-radius: 6px;
   }
 }
