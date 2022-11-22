@@ -19,7 +19,10 @@
 
       <div class="logo">товары<br />и точка</div>
 
-      <input class="search-input" type="text" placeholder="Я ищу..." />
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Я ищу..." />
+        <button class="search__btn"><img src="./assets/search-icon.svg" alt="search"></button>
+      </div>
 
       <nav class="nav">
         <ul class="nav__list">
@@ -39,9 +42,14 @@
       <section>
         <h1>Корзина</h1>
         <section class="cart">
-          <div>
-            <input class="info__check" type="checkbox" name="all-check" />
-            Выбрать все
+          <div class="cart__text">
+            <div>
+              <input class="info__check" type="checkbox" name="all-check" />
+              <span>Выбрать все</span>
+            </div>
+            <button class="cart__btn">
+              <img src="./assets/arrow-up.svg" alt="" />
+            </button>
           </div>
 
           <ul class="cart__list">
@@ -71,7 +79,7 @@
                   </div>
                   <p class="price__available">Осталось 2 шт.</p>
 
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -153,7 +161,7 @@
                     <button class="count__btn">+</button>
                   </div>
 
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -232,7 +240,7 @@
                   </div>
                   <p class="price__available">Осталось 2 шт.</p>
 
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -289,9 +297,9 @@
         </section>
 
         <section class="cart not-available">
-          <div class="not-available__text">
+          <div class="cart__text">
             <p>Отсутствуют · 3 товара</p>
-            <button class="not-available__btn">
+            <button class="cart__btn">
               <img src="./assets/arrow-up.svg" alt="" />
             </button>
           </div>
@@ -311,7 +319,7 @@
 
               <div class="price">
                 <div class="price__btns">
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -374,7 +382,7 @@
 
               <div class="price">
                 <div class="price__btns">
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -437,7 +445,7 @@
 
               <div class="price">
                 <div class="price__btns">
-                  <div>
+                  <div class="price__like-del">
                     <button class="price__like">
                       <svg
                         width="20"
@@ -514,17 +522,28 @@
 
             <div class="delivery__item">
               <h3>5—6 февраля</h3>
-              <div>
-                <img class="delivery__img" src="./assets/item1.png" alt="" />
-                <img class="delivery__img" src="./assets/item2.png" alt="" />
-                <img class="delivery__img" src="./assets/item3.png" alt="" />
+              <div class="gallery">
+                <div class="gallery__item">
+                  <img class="delivery__img" src="./assets/item1.png" alt="" />
+                </div>
+                <div class="gallery__item">
+                  <img class="delivery__img" src="./assets/item2.png" alt="" />
+                  <div class="gallery__circle">184</div>
+                </div>
+                <div class="gallery__item">
+                  <img class="delivery__img" src="./assets/item3.png" alt="" />
+                  <div class="gallery__circle">2</div>
+                </div>
               </div>
             </div>
 
             <div class="delivery__item">
               <h3>7—8 февраля</h3>
-              <div>
-                <img class="delivery__img" src="./assets/item2.png" alt="" />
+              <div class="gallery">
+                <div class="gallery__item">
+                  <img class="delivery__img" src="./assets/item2.png" alt="" />
+                  <div class="gallery__circle">2</div>
+                </div>
               </div>
             </div>
           </div>
@@ -564,20 +583,96 @@
 
           <form class="client__form">
             <div class="client__row1">
-              <input class="client__name" type="text" />
-              <input class="client__surname" type="text" />
+              <input class="client__name" placeholder="Имя" type="text" />
+              <input class="client__surname" placeholder="Фамилия" type="text" />
             </div>
             <div class="client__row2">
-              <input class="client__email" type="text" />
-              <input class="client__number" type="text" />
-              <input class="client__tin" type="text" />
+              <input class="client__email" placeholder="Почта" type="text" />
+              <input class="client__number" value="+7 (988) 123-45-67" placeholder="Телефон" type="tel" />
+              <div>
+                <input class="client__tin" placeholder="ИНН" type="text" />
+                <p class="tin-info">Для таможенного оформления</p>
+              </div>
             </div>
           </form>
         </section>
       </section>
 
-      <aside></aside>
+      <aside>
+        <section class="total">
+          <header>
+            <h2 class="total__title">Итого</h2>
+            <span class="total__sum">2 101 063 сом</span>
+          </header>
+
+          <div class="total__body">
+            <div class="total__list">
+              <div class="total__item">
+                <p>4 товара</p>
+                <p>2 302 048 сом</p>
+              </div>
+              <div class="total__item">
+                <p>Скидка</p>
+                <p>-200 985 сом</p>
+              </div>
+              <div class="total__item">
+                <p>Доставка</p>
+                <p>Бесплатно</p>
+              </div>
+            </div>
+
+            <div class="total__delivery">
+              <header>
+                <h3>Доставка в пункт выдачи</h3>
+                <button><img src="./assets/pencil.svg" alt="pencil"></button>
+              </header>
+
+              <div class="total__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+              <div class="total__date">5–8 фев</div>
+              <div class="total__hint">
+                <div>
+                  <img src="./assets/daw.svg" alt="" />
+                  <p>
+                    Обратная доставка товаров на склад при отказе —
+                    <span>бесплатно</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="total__payment">
+              <header>
+                <h3>Оплата картой</h3>
+                <button><img src="./assets/pencil.svg" alt="pencil"></button>
+              </header>
+
+              <div class="total__card">
+                <img src="./assets/mir.svg" alt="" />
+                <p>1234 56•• •••• 1234</p>
+              </div>
+
+              <div class="total__hint">
+                <div>
+                  <input type="checkbox" name="immediately-payment" id=""> <p>Списать оплату сразу</p>
+                </div>
+                <p>Спишем оплату с карты при получении</p>
+              </div>
+            </div>
+            <footer>
+              <button>Заказать</button>
+              <div class="total__agreement">
+                <img src="./assets/daw2.svg" alt="daw">
+                <p>Соглашаюсь с правилами пользования торговой площадкой и возврата</p>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </aside>
     </main>
+
+    <footer>
+      <p>© 2022  ООО «Товары и точка»</p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
