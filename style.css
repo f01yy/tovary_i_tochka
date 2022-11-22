@@ -236,6 +236,7 @@ main {
 }
 .cart__price .value {
   font-size: 16px;
+  margin-left: 6px;
 }
 .cart__item:nth-child(2) .cart__price p:first-child {
   font-size: 16px;
