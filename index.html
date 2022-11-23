@@ -574,15 +574,23 @@
 
           <form class="client__form">
             <div class="client__row1">
-              <input class="client__name" placeholder="Имя" type="text" />
-              <input class="client__surname" placeholder="Фамилия" type="text" />
+              <div class="client__input">
+                <input class="client__name" placeholder="Укажите имя" type="text" />
+              </div>
+              <div class="client__input">
+                <input class="client__surname" placeholder="Введите фамилию" type="text" />
+              </div>
             </div>
             <div class="client__row2">
-              <input class="client__email" placeholder="Почта" type="text" />
-              <input class="client__number" value="+7 (988) 123-45-67" placeholder="Телефон" type="tel" />
-              <div>
-                <input class="client__tin" placeholder="ИНН" type="text" />
-                <p class="tin-info">Для таможенного оформления</p>
+              <div class="client__input">
+                <input class="client__email" placeholder="Укажите email" type="text" />
+              </div>
+              <div class="client__input">
+                <input class="client__number" placeholder="Укажите номер телефона" type="tel" />
+              </div>
+              <div class="client__input">
+                <input class="client__index" placeholder="Укажите индекс" type="text" />
+                <p class="index-info">Для таможенного оформления</p>
               </div>
             </div>
           </form>
@@ -650,7 +658,7 @@
               </div>
             </div>
             <footer>
-              <button>Заказать</button>
+              <button class="total__btn">Заказать</button>
               <div class="total__agreement">
                 <img src="./assets/daw2.svg" alt="daw">
                 <p>Соглашаюсь <span>с правилами пользования торговой площадкой</span> и возврата</p>

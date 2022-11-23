@@ -262,6 +262,7 @@ main {
   width: 100px;
   border-radius: 8px;
   background-color: #fff;
+  align-self: flex-end;
 }
 .count__btn {
   background-color: transparent;
@@ -432,25 +433,24 @@ main {
 .client__row1 {
   margin-bottom: 37px;
 }
-.client__row1 input,
-.client__row2 input {
+.client__input {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   flex: 1;
+}
+.client__input input::placeholder {
   font-weight: 400;
   font-size: 16px;
 }
-.client__row1 input::placeholder,
-.client__row2 input::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-}
-.client__row1 input {
+.client__row1 .client__input {
   max-width: 338px;
 }
-.client__row2 input {
+.client__row2 .client__input {
   max-width: 217px;
 }
-.client__form input {
+.client__input input {
+  width: 100%;
   font-size: 16px;
   font-weight: 400;
   height: 24px;
@@ -458,7 +458,7 @@ main {
   outline: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.tin-info {
+.index-info {
   font-size: 12px;
 }
 body > footer {
@@ -550,7 +550,7 @@ body > footer p {
   transform: scale(1.5);
   accent-color: #cb11ab;
 }
-.total footer button {
+.total__btn {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -573,6 +573,23 @@ body > footer p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.client__form .empty-input {
+  border-width: 2px;
+  border-color: rgb(193, 21, 21);
+}
+.client__form .empty-input::placeholder {
+  color: rgb(193, 21, 21);
+  font-weight: 600;
+}
+.wrong-input {
+  color: rgb(193, 21, 21);
+}
+.email-warn,
+.index-warn,
+.phone-warn {
+  font-size: 12px;
+  color: rgb(193, 21, 21);
+}
 @media screen and (max-width: 1023px) {
   main {
     display: block;
@@ -776,10 +793,9 @@ body > footer p {
   .client__row1 {
     margin-bottom: 0;
   }
-  .client__row1 input {
-    max-width: 100%;
-  }
-  .client__row2 input {
+  .client__row1 .client__input,
+  .client__row2 .client__input {
+    position: relative;
     max-width: 100%;
   }
   .total {
