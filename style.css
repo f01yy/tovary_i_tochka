@@ -291,6 +291,10 @@ body .like:hover svg path {
   border: none;
   background-color: transparent;
   outline: none;
+  transition: all 0.2s;
+}
+.cart__btn-folded {
+  transform: rotate(180deg);
 }
 .cart__header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -298,6 +302,10 @@ body .like:hover svg path {
   display: flex;
   justify-content: space-between;
   padding-bottom: 16px;
+}
+.cart__header-folded {
+  font-weight: 600;
+  font-size: 16px;
 }
 .cart__header p {
   font-size: 16px;
