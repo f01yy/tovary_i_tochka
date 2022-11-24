@@ -216,16 +216,28 @@ main {
 .del svg path {
   transition: all 0.2s;
 }
+.price-hint {
+  z-index: 2;
+  width: 239px;
+}
+.price-hint p {
+  display: flex;
+  justify-content: space-between;
+}
+.price-hint p span:first-child {
+  color: #a0a0a4;
+}
 .cart__price {
+  align-self: flex-start;
   margin-left: 16px;
   width: 110px;
 }
-.cart__price p:first-child {
+.cart__price > p:first-child {
   text-align: right;
   font-size: 20px;
   font-weight: 700;
 }
-.cart__price p:last-child {
+.cart__price > p:nth-child(2) {
   margin-left: auto;
   width: fit-content;
   position: relative;
@@ -238,7 +250,7 @@ main {
 .cart__price .value {
   font-size: 16px;
 }
-.cart__item:nth-child(2) .cart__price p:first-child {
+.cart__item:nth-child(2) .cart__price > p:first-child {
   font-size: 16px;
 }
 .like svg,
@@ -288,6 +300,7 @@ body .like:hover svg path {
   align-items: center;
 }
 .cart__btn {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   outline: none;
@@ -456,7 +469,18 @@ body .like:hover svg path {
   flex-direction: column;
   gap: 16px;
 }
+.hint-info {
+  position: absolute;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 10px 16px;
+  background-color: #fff;
+  color: #000;
+}
 .delivery__hint {
+  position: relative;
   display: flex;
   gap: 8px;
   margin-top: 26px;
@@ -475,10 +499,6 @@ body .like:hover svg path {
   text-align: left;
   gap: 32px;
 }
-/* .delivery__gallery {
-  display: flex;
-  gap: 8px;
-} */
 .delivery__item .small {
   margin-top: 4px;
   display: flex;
@@ -648,6 +668,7 @@ body > footer p {
   margin-top: 4px;
 }
 .total__hint {
+  position: relative;
   padding: 8px;
   background-color: #f6f6fa;
   border-radius: 8px;
@@ -870,14 +891,14 @@ body > footer p {
     padding: 0;
     justify-content: flex-start;
   }
-  .cart__price p:last-child {
+  .cart__price > p:nth-child(2) {
     display: flex;
     align-items: flex-end;
     font-size: 13px;
     font-weight: 400;
     margin-left: 0;
   }
-  .cart__price p:first-child {
+  .cart__price > p:first-child {
     display: flex;
     align-items: flex-end;
     font-size: 16px;
@@ -1017,5 +1038,25 @@ body > footer p {
   }
   .value {
     margin-left: 3px;
+  }
+  .card-date {
+    display: none;
+  }
+  .modal__body {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .modal__body > div {
+    flex: 1;
+  }
+  .modal .button {
+    max-width: 100%;
+    width: 100%;
   }
 }

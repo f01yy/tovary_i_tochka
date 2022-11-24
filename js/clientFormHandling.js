@@ -164,5 +164,5 @@ clientForm.addEventListener('focusin', (e) => {
 });
 
 clientForm.addEventListener('focusout', (e) => {
-  document.querySelector(`.${e.target.parentNode.className} .hint`).remove();
+  document.querySelector(`.${e.target.parentElement.className} .hint`).remove();
 });
