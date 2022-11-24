@@ -549,17 +549,69 @@
         </section>
 
         <section class="payment">
+          <div class="modal">
+            <div class="modal__body payment__modal">
+              <button class="modal__close">
+                <img src="./assets/close-icon.svg" alt="" />
+              </button>
+              <h2 class="payment__title">Способ оплаты</h2>
+              <div class="payment__list">
+                <label class="payment__radio">
+                  <input type="radio" name="pay" id="card1" value="1">
+                  <div class="payment__item">
+                    <img src="./assets/mir.svg" alt="" />
+                    <p class="payment__card">
+                      <p>1234 56•• •••• 1234</p>
+                      <p>01/29</p>
+                    </p>
+                  </div>
+                </label>
+                <label class="payment__radio">
+                  <input type="radio" name="pay" id="card2" value="2">
+                  <div class="payment__item">
+                    <img src="./assets/visa.svg" alt="" />
+                    <p class="payment__card">
+                      <p>1234 56•• •••• 1234</p>
+                      <p>01/30</p>
+                    </p>
+                  </div>
+                </label>
+                <label class="payment__radio">
+                  <input type="radio" name="pay" id="card3" value="3">
+                  <div class="payment__item">
+                    <img src="./assets/mastercard.svg" alt="" />
+                    <p class="payment__card">
+                      <p>1234 56•• •••• 1234</p>
+                      <p>01/31</p>
+                    </p>
+                  </div>
+                </label>
+                <label class="payment__radio">
+                  <input type="radio" name="pay" id="card4" value="4">
+                  <div class="payment__item">
+                    <img src="./assets/maestro.svg" alt="" />
+                    <p class="payment__card">
+                      <p>1234 56•• •••• 1234</p>
+                      <p>01/32</p>
+                    </p>
+                  </div>
+                </label>
+              </div>
+
+              <button class="button payment__btn">Выбрать</button>
+            </div>
+          </div>
           <header>
             <h2 class="payment__title">Способ оплаты</h2>
             <button class="payment__change">Изменить</button>
           </header>
           <div class="payment__body">
-            <div class="payment__list">
+            <div class="payment__current">
               <div class="payment__item">
                 <img src="./assets/mir.svg" alt="" />
                 <p class="payment__card">
                   <p>1234 56•• •••• 1234</p>
-                  <p>01/30</p>
+                  <p>01/29</p>
                 </p>
               </div>
             </div>
@@ -658,7 +710,7 @@
               </div>
             </div>
             <footer>
-              <button class="total__btn">Заказать</button>
+              <button class="button total__btn">Заказать</button>
               <div class="total__agreement">
                 <img src="./assets/daw2.svg" alt="daw">
                 <p>Соглашаюсь <span>с правилами пользования торговой площадкой</span> и возврата</p>
@@ -691,6 +743,7 @@
       </div>
     </footer>
 
+    <script src="./js/paymentHandling.js"></script>
     <script src="./js/clientFormHandling.js"></script>
   </body>
 </html>

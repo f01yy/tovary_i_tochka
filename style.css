@@ -326,6 +326,40 @@ main {
   border-radius: 16px;
   padding: 16px 24px;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal__body {
+  position: relative;
+  padding: 16px 24px;
+  min-height: 200px;
+  min-width: 360px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.payment .modal {
+  display: none;
+}
+
 .delivery {
   margin-top: 40px;
 }
@@ -334,6 +368,10 @@ main {
 .total > header {
   display: flex;
   justify-content: space-between;
+}
+.payment__radio {
+  display: flex;
+  gap: 8px;
 }
 .delivery__title,
 .payment__title,
@@ -346,6 +384,7 @@ main {
 }
 .delivery__change,
 .payment__change {
+  cursor: pointer;
   border: none;
   background-color: transparent;
   outline: none;
@@ -413,6 +452,15 @@ main {
 .payment__item,
 .total__card {
   gap: 8px;
+}
+.modal .payment__item {
+  align-items: center;
+  gap: 8px;
+}
+.modal .payment__item input[type='radio'] {
+  accent-color: #cb11ab;
+  height: 16px;
+  width: 16px;
 }
 .payment__card {
   display: flex;
@@ -568,7 +616,8 @@ body > footer p {
   transform: scale(1.5);
   accent-color: #cb11ab;
 }
-.total__btn {
+.button {
+  cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -578,6 +627,14 @@ body > footer p {
   outline: none;
   background: #cb11ab;
   border-radius: 8px;
+}
+.total__btn {
+}
+.payment__btn {
+  width: 164px;
+  height: 44px;
+  padding: 8px 48px;
+  margin-top: 60px;
 }
 .total__agreement {
   margin-top: 12px;
