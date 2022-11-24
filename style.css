@@ -206,18 +206,14 @@ main {
   display: flex;
   gap: 16px;
 }
-.cart__like,
-.cart__del,
-.delivery__del,
-.payment__del {
+.like,
+.del {
   cursor: pointer;
   border: none;
   background-color: transparent;
 }
-.cart__like svg path,
-.cart__del svg path,
-.delivery__del svg path,
-.payment__del svg path {
+.like svg path,
+.del svg path {
   transition: all 0.2s;
 }
 .cart__price {
@@ -245,19 +241,15 @@ main {
 .cart__item:nth-child(2) .cart__price p:first-child {
   font-size: 16px;
 }
-.cart__like svg,
-.cart__del svg,
-.delivery__del svg,
-.payment__del svg {
+.like svg,
+.del svg {
   width: 20px;
   height: 20px;
 }
-.cart__del:hover svg path,
-.delivery__del:hover svg path,
-.payment__del:hover svg path {
+body .del:hover svg path {
   fill: #f55123 !important;
 }
-.cart__like:hover svg path {
+body .like:hover svg path {
   fill: #cb11ab;
 }
 
@@ -320,7 +312,7 @@ main {
 .not-available .cart__btns div {
   margin-right: 126px;
 }
-.not-available .cart__item:last-child .cart__del svg path {
+.not-available .cart__item:last-child .del svg path {
   fill: #000;
 }
 .not-available .cart__list {
@@ -415,15 +407,13 @@ main {
   font-weight: 700;
   font-size: 13px;
 }
-.delivery__del,
-.payment__del,
-.payment__del {
+.del {
   align-self: flex-start;
   width: fit-content;
   margin-left: auto;
 }
-.delivery__del svg path,
-.payment__del svg path {
+.delivery__addresses .del svg path,
+.payment__list .del svg path {
   fill: #a0a0a4 !important;
 }
 .payment__radio {
