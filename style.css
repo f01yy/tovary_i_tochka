@@ -207,12 +207,17 @@ main {
   gap: 16px;
 }
 .cart__like,
-.cart__del {
+.cart__del,
+.delivery__del,
+.payment__del {
+  cursor: pointer;
   border: none;
   background-color: transparent;
 }
 .cart__like svg path,
-.cart__del svg path {
+.cart__del svg path,
+.delivery__del svg path,
+.payment__del svg path {
   transition: all 0.2s;
 }
 .cart__price {
@@ -241,11 +246,15 @@ main {
   font-size: 16px;
 }
 .cart__like svg,
-.cart__del svg {
+.cart__del svg,
+.delivery__del svg,
+.payment__del svg {
   width: 20px;
   height: 20px;
 }
-.cart__del:hover svg path {
+.cart__del:hover svg path,
+.delivery__del:hover svg path,
+.payment__del:hover svg path {
   fill: #f55123 !important;
 }
 .cart__like:hover svg path {
@@ -341,8 +350,8 @@ main {
 .modal__body {
   position: relative;
   padding: 16px 24px;
-  min-height: 200px;
-  min-width: 360px;
+  max-width: 500px;
+  width: 100%;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -356,7 +365,7 @@ main {
   outline: none;
   background-color: transparent;
 }
-.payment .modal {
+.modal {
   display: none;
 }
 
@@ -368,6 +377,54 @@ main {
 .total > header {
   display: flex;
   justify-content: space-between;
+}
+.delivery__methods {
+  display: flex;
+  gap: 8px;
+}
+.delivery__method.active {
+  border-color: #cb11ab;
+}
+.delivery__method {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13px;
+  max-width: 224px;
+  width: 100%;
+  height: 36px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  border-radius: 20px;
+}
+.delivery__addresses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery__addresses label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.delivery__addresses p {
+}
+.delivery__addresses h3 {
+  margin-top: 26px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.delivery__del,
+.payment__del,
+.payment__del {
+  align-self: flex-start;
+  width: fit-content;
+  margin-left: auto;
+}
+.delivery__del svg path,
+.payment__del svg path {
+  fill: #a0a0a4 !important;
 }
 .payment__radio {
   display: flex;
@@ -432,7 +489,7 @@ main {
 .delivery__item .small p {
   font-size: 13px;
 }
-.delivery__item p {
+.delivery__address {
   font-size: 16px;
   font-weight: 400;
 }
@@ -449,15 +506,16 @@ main {
   font-size: 13px;
   color: #a0a0a4;
 }
-.payment__item,
-.total__card {
+.payment__item {
   gap: 8px;
 }
 .modal .payment__item {
   align-items: center;
   gap: 8px;
 }
-.modal .payment__item input[type='radio'] {
+.modal input[type='radio'],
+.delivery__addresses input[type='radio'] {
+  cursor: pointer;
   accent-color: #cb11ab;
   height: 16px;
   width: 16px;
@@ -574,6 +632,7 @@ body > footer p {
 }
 .total__delivery button,
 .total__payment button {
+  cursor: pointer;
   border: none;
   outline: none;
   background-color: transparent;
@@ -630,7 +689,8 @@ body > footer p {
 }
 .total__btn {
 }
-.payment__btn {
+.payment__btn,
+.delivery__btn {
   width: 164px;
   height: 44px;
   padding: 8px 48px;
