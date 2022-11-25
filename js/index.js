@@ -3,4 +3,4 @@ import './paymentFormHandling.js';
 import './deliveryHandling.js';
 import './folding.js';
 import './hover.js';
-import './calculateTotal.js';
+import './totalHandling.js';

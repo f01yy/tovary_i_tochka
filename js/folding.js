@@ -29,7 +29,7 @@ arrow.addEventListener('click', () => {
   }
 });
 
-function morph(int, array) {
+export function morph(int, array) {
   return (
     (array = array || ['товар', 'товара', 'товаров']) &&
     array[
