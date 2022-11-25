@@ -10,6 +10,10 @@ const currentAddress = document.querySelector(
 const totalCurrentAddress = document.querySelector('.total__address');
 const totalDeliveryHeader = document.querySelector('.total__delivery h3');
 
+const addressDelBtns = Array.from(
+  document.querySelectorAll('.delivery__addresses .del')
+);
+
 const deliveryMethods = Array.from(
   document.querySelectorAll('.delivery__method')
 );
@@ -65,4 +69,10 @@ deliveryBtn.addEventListener('click', () => {
     totalDeliveryHeader.innerHTML =
       'Доставка ' + selectedMethod.innerHTML.toLowerCase();
   }
+});
+
+addressDelBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.closest('label').remove();
+  });
 });

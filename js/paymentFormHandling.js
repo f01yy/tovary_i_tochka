@@ -7,6 +7,10 @@ const paymentCurrent = document.querySelector('.payment__current');
 const totalPaymentChange = document.querySelector('.total__payment button');
 const totalPaymentCurrent = document.querySelector('.total__card');
 
+const paymentDelBtns = Array.from(
+  document.querySelectorAll('.payment__radio .del')
+);
+
 const paymentOptions = Array.from(
   document.querySelectorAll('.payment .modal .payment__item')
 );
@@ -48,4 +52,10 @@ paymentPopup.addEventListener('click', () => {
 
 paymentClose.addEventListener('click', () => {
   paymentPopup.style.display = 'none';
+});
+
+paymentDelBtns.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    btn.closest('label').remove();
+  });
 });
