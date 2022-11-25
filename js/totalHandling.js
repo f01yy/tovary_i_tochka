@@ -11,6 +11,11 @@ const totalCheckbox = document.querySelector(
 const countPluses = Array.from(document.querySelectorAll('.count__plus'));
 const countMinuses = Array.from(document.querySelectorAll('.count__minus'));
 
+const cartChecks = Array.from(
+  document.querySelectorAll('.cart__item .cart__check')
+);
+const allCheck = document.querySelector('.cart__header .cart__check');
+
 totalCheckbox.addEventListener('change', () => {
   if (totalCheckbox.checked) {
     totalBtn.innerHTML += ' сразу';
@@ -27,7 +32,7 @@ function renderTotal() {
 
   const cartItems = Array.from(
     document.querySelectorAll('.full-cart .cart__item')
-  );
+  ).filter((cartItem) => cartItem.querySelector('.cart__check').checked);
 
   console.log(cartItems);
 
@@ -141,4 +146,26 @@ countMinuses.forEach((countMinus) => {
       renderTotal();
     }
   });
+});
+
+cartChecks.forEach((cartCheck) => {
+  cartCheck.addEventListener('change', (e) => {
+    if (!cartCheck.checked) {
+      allCheck.checked = false;
+    }
+    renderTotal();
+  });
+});
+
+allCheck.addEventListener('change', () => {
+  if (allCheck.checked) {
+    cartChecks.forEach((cartCheck) => {
+      cartCheck.checked = true;
+    });
+  } else {
+    cartChecks.forEach((cartCheck) => {
+      cartCheck.checked = false;
+    });
+  }
+  renderTotal();
 });
