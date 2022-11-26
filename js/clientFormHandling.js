@@ -10,18 +10,38 @@ const indexInput = document.querySelector('.client__index .client__input');
 
 totalBtn.addEventListener('click', () => {
   if (!nameInput.value.length) {
+    if (window.innerWidth < 640) {
+      nameInput.scrollIntoView();
+    }
+
     nameInput.classList.add('empty-input');
   }
   if (!surnameInput.value.length) {
+    if (window.innerWidth < 640) {
+      surnameInput.scrollIntoView();
+    }
+
     surnameInput.classList.add('empty-input');
   }
   if (!emailInput.value.length) {
+    if (window.innerWidth < 640) {
+      emailInput.scrollIntoView();
+    }
+
     emailInput.classList.add('empty-input');
   }
   if (!phoneInput.value.length) {
+    if (window.innerWidth < 640) {
+      phoneInput.scrollIntoView();
+    }
+
     phoneInput.classList.add('empty-input');
   }
   if (!indexInput.value.length) {
+    if (window.innerWidth < 640) {
+      indexInput.scrollIntoView();
+    }
+
     indexInput.classList.add('empty-input');
   }
 });
