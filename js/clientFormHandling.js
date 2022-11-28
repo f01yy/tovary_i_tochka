@@ -128,7 +128,7 @@ clientForm.addEventListener('focusout', (e) => {
       }
     } else if (validateIndex(e.target.value) && e.target.value.length) {
       indexInput.classList.remove('wrong-input');
-      indexWarn.classList.remove('warn');
+      document.querySelector('.client__index .warn').classList.remove('warn');
     }
   }
 });
